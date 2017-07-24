@@ -1,0 +1,6 @@
+lazy val sbt_docker_container = (project in file("."))
+  .enablePlugins(SpringBootSettings.enabledPlugins: _*)
+  .enablePlugins(DockerSettings.enabledPlugins: _*)
+  .disablePlugins(SpringBootSettings.disabledPlugins: _*)
+  .settings(SpringBootSettings.moduleSettings: _*)
+  .settings(DockerSettings.moduleSettings: _*)
